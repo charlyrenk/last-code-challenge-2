@@ -4,13 +4,14 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var index = require('./routes/index');
-
+var messages = require('./routes/messages')
 // middleware
 app.use(express.static('public')); 
 app.use(bodyParser.json());
 
 // routing
 app.use('/', index);
+app.use('/messages', messages);
 
 //  database connection
 var databaseUrl = 'mongodb://localhost:27017/messages';

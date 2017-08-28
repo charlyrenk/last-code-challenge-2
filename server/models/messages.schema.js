@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // schema
-var smessages = new Schema({
+var messagesSchema = new Schema({
     name: {type: String},
     message: {type: String}
 },
@@ -11,4 +11,4 @@ var smessages = new Schema({
 }   
 );
 
-module.exports = mongoose.model('messages', salesListingSchema);
+module.exports = mongoose.model('messages', messagesSchema);
