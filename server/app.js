@@ -13,6 +13,19 @@ app.use(bodyParser.json());
 app.use('/', index);
 
 //  database connection
+var databaseUrl = 'mongodb://localhost:27017/messages';
+mongoose.connect(databaseUrl,
+    {
+        useMongoClient: true
+    });
+
+// optional, but very nice
+mongoose.connection.on('connected', function () {
+    console.log('mongoose connected to : ', databaseUrl);
+});
+mongoose.connection.on('error', function (err) {
+    console.log('mongoose connection error to : ', err);
+});
 
 // server listen
 var port = process.env.PORT || 5000;    // required for deployment
