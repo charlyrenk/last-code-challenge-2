@@ -14,14 +14,14 @@
 <body ng-app="messageApp" ng-controller="messageController as vm">
     <h1>Angular Mongoose Messenger</h1>
     <h3>Add Person's Message</h3>
-    <input type="text" ng-model="vm.newMessage.person" placeholder="Name" />
+    <input type="text" ng-model="vm.newMessage.name" placeholder="Name" />
     <input type="text" ng-model="vm.newMessage.message" placeholder="Message" />
     <button ng-click="vm.addMessage(vm.newMessage)">Add Message</button>
     <br>
     <h2>Messages So-far:</h2>
-    <div ng-repeat="message in vm.messages.list">
+    <!-- <div ng-repeat="message in vm.messages.list">
     <p>Name: {{}}</p>
-    <p>Message: {{}}</p>
+    <p>Message: {{}}</p> -->
 </div> 
 
 </body>

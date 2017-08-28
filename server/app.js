@@ -14,7 +14,7 @@ app.use('/', index);
 app.use('/messages', messages);
 
 //  database connection
-var databaseUrl = 'mongodb://localhost:27017/messages';
+var databaseUrl = 'mongodb://localhost:27017/betelgeuse';
 mongoose.connect(databaseUrl,
     {
         useMongoClient: true

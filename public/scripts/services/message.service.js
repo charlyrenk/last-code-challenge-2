@@ -10,4 +10,6 @@ messageApp.service('MessageService', ['$http', function ($http) {
             console.log('Saved new message!');
         });
     };
+
+    
 }]);
