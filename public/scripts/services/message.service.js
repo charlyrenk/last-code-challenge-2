@@ -10,6 +10,12 @@ messageApp.service('MessageService', ['$http', function ($http) {
             console.log('Saved new message!');
         });
     };
+    self.getMessages = function () {
+        $http.get('/messages').then(function (response) {
+            self.messages.list = response.data;
 
-    
+            console.log('services get data: ', self.listings);
+        });
+    };
+
 }]);

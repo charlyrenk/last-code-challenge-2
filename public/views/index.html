@@ -19,9 +19,10 @@
     <button ng-click="vm.addMessage(vm.newMessage)">Add Message</button>
     <br>
     <h2>Messages So-far:</h2>
-    <!-- <div ng-repeat="message in vm.messages.list">
-    <p>Name: {{}}</p>
-    <p>Message: {{}}</p> -->
+    {{vm}}
+     <div ng-repeat="message in vm.messages.list">
+    <p>Name: {{message.name}}</p>
+    <p>Message: {{message.message}}</p> 
 </div> 
 
 </body>

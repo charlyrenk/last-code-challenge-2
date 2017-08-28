@@ -4,4 +4,6 @@ messageApp.controller('messageController', ['MessageService', function(MessageSe
     self.addMessage = function (messageToAdd) {
         MessageService.addMessage(messageToAdd);
     };
+    MessageService.getMessages();
+    self.messages = MessageService.messages;
 }]);

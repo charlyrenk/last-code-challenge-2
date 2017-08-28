@@ -24,4 +24,20 @@ router.post('/', function(req, res) {
     });
 
 });
+
+router.get('/', function (req, res) {
+    
+    // get our data
+    message.find({}, function(err, data) {
+        if (err) {
+            console.log('find error: ', err);
+            res.sendStatus(500);
+        } else {
+            console.log('found data: ', data);
+            res.send(data);
+        }
+    });
+
+});
+
 module.exports = router;
